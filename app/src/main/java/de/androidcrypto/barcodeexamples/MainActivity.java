@@ -27,8 +27,18 @@ public class MainActivity extends AppCompatActivity {
         btn_scan =findViewById(R.id.btn_scan);
         btn_scan.setOnClickListener(v->
         {
+            Intent intent = new Intent(MainActivity.this, BiometricActivity.class);
+            startActivity(intent);
+        });
+
+        /*
+        btn_scan =findViewById(R.id.btn_scan);
+        btn_scan.setOnClickListener(v->
+        {
             scanCode();
         });
+
+         */
     }
 
     private void scanCode()
