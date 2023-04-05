@@ -26,4 +26,38 @@ https://drive.google.com/drive/folders/1Q1tK9PkOX_k5DsiXN52i3ftLfcFmtRlc
 
 implementation "androidx.biometric:biometric:1.1.0"
 
+```plaintext
+9952019462625
+EAN_13
+Product
+
+2
+https://stackoverflow.com/a/11965553/8166854
+
+This code made it possible:
+
+Intent intent = new Intent("com.google.zxing.client.android.ENCODE");
+intent.putExtra("ENCODE_FORMAT", "EAN_13");
+intent.putExtra("ENCODE_DATA", "3800065711135");
+startActivity(intent);
+
+https://www.baeldung.com/java-generating-barcodes-qr-codes
+
+https://stackoverflow.com/questions/38260601/barcode4j-generate-check-digit-in-an-ean13-barcode
+
+In case you what to compute the check digit without importing a java library here's the code:
+
+public static String ean13CheckDigit(String barcode) {
+    int s = 0;
+    for (int i = 0; i < 12; i++) {
+        int c = Character.getNumericValue(barcode.charAt(i));
+        s += c * ( i%2 == 0? 1: 3);
+    }
+    s = (10 - s % 10) % 10;
+    barcode += s;
+    return barcode;
+}
+
+
+```
 
