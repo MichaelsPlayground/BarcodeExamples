@@ -26,6 +26,7 @@ https://drive.google.com/drive/folders/1Q1tK9PkOX_k5DsiXN52i3ftLfcFmtRlc
 
 implementation "androidx.biometric:biometric:1.1.0"
 
+
 ```plaintext
 9952019462625
 EAN_13
