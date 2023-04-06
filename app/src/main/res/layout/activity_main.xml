@@ -30,6 +30,18 @@
         android:layout_height="wrap_content"
         android:text="Scan Barcode" />
 
+    <Button
+        android:id="@+id/btnBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bar chart" />
+
+    <Button
+        android:id="@+id/btnLineChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Line chart" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

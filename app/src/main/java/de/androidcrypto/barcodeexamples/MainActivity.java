@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.data.LineDataSet;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
@@ -27,7 +28,7 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnScan, btnGenerate, btnBiometrics;
+    Button btnScan, btnGenerate, btnBiometrics, btnBarChart, btnLineChart;
     EditText edit_input;
     ImageView iv_qr;
 
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         btnBiometrics = findViewById(R.id.btnBiometrics);
         edit_input = findViewById(R.id.edit_input);
         iv_qr = findViewById(R.id.iv_qr);
+        btnBarChart = findViewById(R.id.btnBarChart);
+        btnLineChart = findViewById(R.id.btnLineChart);
 
 
         btnScan.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +91,22 @@ public class MainActivity extends AppCompatActivity {
         {
             Intent intent = new Intent(MainActivity.this, BiometricActivity.class);
             startActivity(intent);
+        });
+
+        btnBarChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BarChartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLineChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LineChartActivity.class);
+                startActivity(intent);
+            }
         });
 
     }
