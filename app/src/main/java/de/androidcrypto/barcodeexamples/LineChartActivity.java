@@ -37,7 +37,7 @@ public class LineChartActivity extends AppCompatActivity
         //settting text size
         lineDataSet.setValueTextSize(16f);
         lineChart.getDescription().setEnabled(true);
-        lineChart.set
+        //lineChart.set
 
     }
 
