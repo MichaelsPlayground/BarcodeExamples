@@ -32,7 +32,7 @@ https://www.cambotutorial.com/article/how-to-implement-awesome-chart-graph-in-yo
 
 implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
-## BarChart
+## LineChart
 
 https://www.cambotutorial.com/article/how-to-implement-awesome-chart-graph-in-your-android-app
 
